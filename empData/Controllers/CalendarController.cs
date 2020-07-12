@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using empData.Data;
+using empData.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace empData.Controllers
 {
@@ -12,5 +15,9 @@ namespace empData.Controllers
         {
             return View();
         }
+        
+
+           
+        
     }
 }
