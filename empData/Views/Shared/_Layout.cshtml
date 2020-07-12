@@ -1,14 +1,43 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - empData</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
-    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="~/css/calendar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 <body>
+    <div class="modal fade" id="modal-window">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title">Список сотрудников, работающих в этот день:</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="list-items-class">
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex align-items-center justify-content-between">Cras justo odio<span class="badge badge-success badge-pill">7-18</span></li>
+                            <li class="list-group-item d-flex align-items-center justify-content-between">Dapibus ac facilisis in<span class="badge badge-primary badge-pill">18-20</span></li>
+                            <li class="list-group-item d-flex align-items-center justify-content-between">Morbi leo risus<span class="badge badge-warning badge-pill">Отгул</span></li>
+                            <li class="list-group-item d-flex align-items-center justify-content-between">Porta ac consectetur ac<span class="badge badge-danger badge-pill">Прогул</span></li>
+                            <li class="list-group-item d-flex align-items-center justify-content-between">Vestibulum at eros<span class="badge badge-info badge-pill">Отпуск</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
@@ -33,7 +62,10 @@
                 </div>
             </div>
         </nav>
+
     </header>
+
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -48,7 +80,11 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    <script src="js/calendar-script.js"></script>
-    @RenderSection("Scripts", required: false)
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="~/js/calendar-script123.js"></script>
+    @RenderSection("Script", required: false)
 </body>
 </html>
+

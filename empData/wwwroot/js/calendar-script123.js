@@ -1,10 +1,10 @@
-let date = new Date();
+﻿let date = new Date();
 
 let options = {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
-  weekday: 'long',
+	year: 'numeric',
+	month: 'long',
+	day: 'numeric',
+	weekday: 'long',
 };
 
 const renderCalendar = () => {
@@ -40,21 +40,25 @@ const renderCalendar = () => {
 
 	let days = "";
 
-	for (let x = firstDayIndex ; x > 0; x--) {
+	for (let x = firstDayIndex; x > 0; x--) {
 		days += `<div class="prev-date border">${prevLastDay - x + 1}</div>`
 	}
 
 	for (let i = 1; i <= lastDay; i++) {
-		if (i === new Date().getDate() && date.getMonth() === new Date().getMonth()){
-			days += `<div class="today border">${i}</div>`;
+		if (i === new Date().getDate() && date.getMonth() === new Date().getMonth()) {
+			days += `<div data-toggle="modal" data-target="#modal-window" class="today border">${i}</div>`;
+		} else if (i < date.getDate()) {
+			days += `<div data-toggle="modal" data-target="#modal-window" class="border">${i}</div>`;
 		} else {
-			days += `<div class="border">${i}</div>`;
+			days += `<div class = 'border'>${i}</div>`;
 		}
-		
+
 	}
 
-	for (let j  = 1; j <= nextDays + 1; j++) {
-		days += `<div class="next-days border">${j}</div>`;
+	for (let j = 1; j <= nextDays + 1; j++) {
+		if (lastDayIndex != 0) {
+			days += `<div class="next-days border">${j}</div>`;
+		}
 		monthDays.innerHTML = days;
 	}
 }
