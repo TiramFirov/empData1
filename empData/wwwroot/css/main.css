@@ -9,28 +9,35 @@ body {
 	width: 100%;
 }
 
-header nav {
+nav {
 	background-color: #a0d2eb;
 }
 
 .box-of-windows {
-	background-color: #e5eaf5!important;
+	background-color: #494d5f;
 }
 
-.calendar {
-	height: 100%;
+.list-of-employee, .add-new-employee, .calendar {
+	height: 100vh;
 	width: 100vw;
 }
 
-.calendar-window {
-	margin: 0 auto;
-	height: 100%;
-	width: 100vw;
+.list-card, .calendar-window {
+	max-height: 100vh;
+}
+
+.card-header {
 	background-color: #e5eaf5 !important;
 }
 
-.list-items-class {
-	overflow-y: auto; 
+.list-items-class, .calendar-window {
+	overflow-y: auto;
 }
+
+.add-card-form, .list-card, .calendar-window {
+	margin: 0 auto;
+	background-color: #e5eaf5 !important;
+}
+
 /* Шрифт */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');

@@ -1,41 +1,47 @@
 .month i {
-	font-size: 2rem;
-	cursor: pointer;
+    font-size: 2rem;
+    cursor: pointer;
 }
 
 .week-days {
-	width: 100%;
-	display: grid;
-	grid-template-rows: 1fr;
-  	grid-template-columns: repeat(7, 1fr);
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(7, 1fr);
 }
- .days {
- 	width: 100%;
- 	display: grid;
-  	grid-template-rows: repeat(7, 1fr);
-  	grid-template-columns: repeat(7, 1fr);
- }
 
- .days div, .week-days div {
- 	height: 3rem;
- 	display: flex;
- 	justify-content: center;
- 	align-items: center;
- 	font-weight: 600;
- }
+.days {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(7, 1fr);
+}
 
- .days div {
- 	cursor: pointer;
- }
+    .days div, .week-days div {
+        height: 100%;
+    }
 
- .days div:hover:not(.today) {
- 	background-color: #ddd;
- }
+        .days div .day-num {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            font-weight: 600;
+            margin: 2px 2px 0 0;
+        }
 
- .prev-date, .next-days {
- 	opacity: 0.5;
- }
+    .days div {
+        cursor: pointer;
+    }
 
- .today {
- 	background-color: #ccc;
- }
+        .days div:hover:not(.today) {
+            background-color: #ddd;
+        }
+
+.prev-date, .next-days {
+    opacity: 0.5;
+}
+
+.today {
+    background-color: #ccc;
+}
