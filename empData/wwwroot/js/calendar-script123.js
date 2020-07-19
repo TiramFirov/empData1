@@ -48,23 +48,23 @@ const renderCalendar = () => {
 	let days = "";
 
 	for (let x = firstDayIndex; x > 0; x--) {
-		days += `<div class="prev-date border"><span class="day-num">${prevLastDay - x + 1}</span></div>`
+		days += `<div class="prev-date day border"><span class="day-num">${prevLastDay - x + 1}</span></div>`
 	}
 
 	for (let i = 1; i <= lastDay; i++) {
 		if (i === new Date().getDate() && date.getMonth() === new Date().getMonth()) {
-			days += `<div data-toggle="modal" data-target="#modal-window" class="today border"><span class="day-num">${i}</span><div class="type-signs-with-FIO"><span class="type-sign badge badge-warning badge-pill">Перкокуев В.М</span><span class="type-sign badge badge-warning badge-pill">Перкокуев В.М</span></div><div class="type-signs-without-FIO d-none"><span class="type-sign badge badge-warning badge-pill">4</span></div></div></div>`;
+			days += `<div data-toggle="modal" data-target="#modal-window" class="day today border"><span class="day-num">${i}</span><div class="type-signs-with-FIO"><span class="type-sign badge badge-warning badge-pill">Перкокуев В.М</span><span class="type-sign badge badge-warning badge-pill">Перкокуев В.М</span></div><div class="type-signs-without-FIO d-none"><span class="type-sign badge badge-warning badge-pill">4</span></div></div>`;
 		} else if (i < date.getDate()) {
-			days += `<div data-toggle="modal" data-target="#modal-window" class="border"><span class="day-num">${i}</span><div class="type-signs-with-FIO"><span class="type-sign badge badge-warning badge-pill">Перкокуев В.М</span><span class="type-sign badge badge-warning badge-pill">Перкокуев В.М</span></div><div class="type-signs-without-FIO d-none"><span class="type-sign badge badge-warning badge-pill">5</span></div></div>`;
+			days += `<div data-toggle="modal" data-target="#modal-window" class="day border"><span class="day-num">${i}</span><div class="type-signs-with-FIO"><span class="type-sign badge badge-warning badge-pill">Перкокуев В.М</span><span class="type-sign badge badge-warning badge-pill">Перкокуев В.М</span></div><div class="type-signs-without-FIO d-none"><span class="type-sign badge badge-warning badge-pill">5</span></div></div>`;
 		} else {
-			days += `<div class="border"><span class="day-num">${i}</span><div class="type-signs-with-FIO"><span class="type-sign badge badge-warning badge-pill">Перкокуев В.М</span><span class="type-sign badge badge-warning badge-pill">Перкокуев В.М</span></div><div class="type-signs-without-FIO d-none"><span class="type-sign badge badge-warning badge-pill">9</span></div></div></div>`;
+			days += `<div class="day border"><span class="day-num">${i}</span><div class="type-signs-with-FIO"><span class="type-sign badge badge-warning badge-pill">Перкокуев В.М</span><span class="type-sign badge badge-warning badge-pill">Перкокуев В.М</span></div><div class="type-signs-without-FIO d-none"><span class="type-sign badge badge-warning badge-pill">9</span></div></div></div>`;
 		}
 
 	}
 
 	for (let j = 1; j <= nextDays + 1; j++) {
 		if (lastDayIndex != 0) {
-			days += `<div class="next-days border"><span class="day-num">${j}</span></div>`;
+			days += `<div class="next-days day border"><span class="day-num">${j}</span></div>`;
 		}
 		monthDays.innerHTML = days;
 	}

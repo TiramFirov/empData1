@@ -1,4 +1,4 @@
-//Логика окон
+/*//Логика окон
 
 let list_emp = document.getElementById('list-emp');
 let add_emp = document.getElementById('add-emp');
@@ -76,7 +76,7 @@ function changeSelectedTabOnCal(){
 		add_new_emp.classList.add("d-none");
 	}
 }
-
+*/
 
 
 

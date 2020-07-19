@@ -18,25 +18,25 @@
     grid-template-columns: repeat(7, 1fr);
 }
 
-    .days div, .week-days div {
-        height: 100%;
-    }
+.days div, .week-days div {
+    height: 100%;
+}
 
-        .days div .day-num {
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-start;
-            font-weight: 600;
-            margin: 2px 2px 0 0;
-        }
+.days div .day-num {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    font-weight: 600;
+    margin: 2px 2px 0 0;
+}
 
-    .days div {
-        cursor: pointer;
-    }
+.days div {
+    cursor: pointer;
+}
 
-        .days div:hover:not(.today) {
-            background-color: #ddd;
-        }
+.days .day:hover:not(.today) {
+    background-color: #ddd;
+}
 
 .prev-date, .next-days {
     opacity: 0.5;
